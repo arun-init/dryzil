@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dryzil — Dried. Concentrated. Nothing else added.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,460;0,9..144,560;0,9..144,640;1,9..144,460&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Dryzil creates concentrated dried fruit, vegetable and herb products with no added sugar, oil or preservatives.">
+<meta name="theme-color" content="#FCF6EC">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <radialGradient id="mangoFlesh" cx="42%" cy="38%" r="65%">
+    <stop offset="0%" stop-color="#FBDA8E"/>
+    <stop offset="55%" stop-color="#F0A93E"/>
+    <stop offset="100%" stop-color="#C06B27"/>
+  </radialGradient>
+  <radialGradient id="mangoSkin" cx="45%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#A9C97C"/>
+    <stop offset="100%" stop-color="#6E7A3C"/>
+  </radialGradient>
+  <radialGradient id="beetRing" cx="45%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#E7A7B5"/>
+    <stop offset="45%" stop-color="#C24E63"/>
+    <stop offset="100%" stop-color="#7A2438"/>
+  </radialGradient>
+  <radialGradient id="citrusFlesh" cx="40%" cy="36%" r="65%">
+    <stop offset="0%" stop-color="#F6C79E"/>
+    <stop offset="55%" stop-color="#E58A38"/>
+    <stop offset="100%" stop-color="#B5652E"/>
+  </radialGradient>
+  <linearGradient id="citrusRind" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#D4633C"/>
+    <stop offset="100%" stop-color="#96334A"/>
+  </linearGradient>
+  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#9DB57C"/>
+    <stop offset="100%" stop-color="#5D7247"/>
+  </linearGradient>
+
+  <path id="blobPath" d="M0,-104 C40,-102 78,-70 96,-30 C112,10 100,54 68,82 C34,110 -22,108 -58,80 C-94,52 -108,4 -92,-38 C-78,-76 -40,-106 0,-104 Z"/>
+  <clipPath id="blobClip"><use href="#blobPath"/></clipPath>
+
+  <g id="mango-unit">
+    <ellipse cx="8" cy="14" rx="98" ry="90" fill="#2E2013" opacity="0.10"/>
+    <use href="#blobPath" fill="url(#mangoSkin)"/>
+    <use href="#blobPath" fill="url(#mangoFlesh)" transform="scale(0.86)"/>
+    <g stroke="#B5652E" stroke-width="1.6" opacity="0.32" fill="none" clip-path="url(#blobClip)">
+      <path d="M0,0 L70,-40"/>
+      <path d="M0,0 L84,8"/>
+      <path d="M0,0 L58,58"/>
+      <path d="M0,0 L-8,78"/>
+      <path d="M0,0 L-66,36"/>
+      <path d="M0,0 L-70,-32"/>
+    </g>
+    <ellipse cx="6" cy="2" rx="26" ry="34" fill="#9A5320" opacity="0.92" transform="rotate(-8)"/>
+    <ellipse cx="-28" cy="-32" rx="28" ry="16" fill="#FFFFFF" opacity="0.24"/>
+  </g>
+
+  <g id="beet-unit">
+    <ellipse cx="8" cy="14" rx="98" ry="90" fill="#2E2013" opacity="0.10"/>
+    <use href="#blobPath" fill="url(#beetRing)"/>
+    <g fill="none" stroke="#F6DDE2" clip-path="url(#blobClip)">
+      <circle r="80" opacity="0.5" stroke-width="4"/>
+      <circle r="58" opacity="0.42" stroke-width="4"/>
+      <circle r="36" opacity="0.38" stroke-width="4"/>
+      <circle r="14" opacity="0.32" stroke-width="4"/>
+    </g>
+    <ellipse cx="-26" cy="-30" rx="26" ry="15" fill="#FFFFFF" opacity="0.2"/>
+  </g>
+
+  <g id="citrus-unit">
+    <ellipse cx="8" cy="14" rx="98" ry="90" fill="#2E2013" opacity="0.10"/>
+    <use href="#blobPath" fill="url(#citrusRind)"/>
+    <use href="#blobPath" fill="url(#citrusFlesh)" transform="scale(0.84)"/>
+    <g stroke="#FFF7EC" stroke-width="2.4" opacity="0.55" clip-path="url(#blobClip)">
+      <line x1="0" y1="0" x2="0" y2="-84"/>
+      <line x1="0" y1="0" x2="58" y2="-58"/>
+      <line x1="0" y1="0" x2="84" y2="0"/>
+      <line x1="0" y1="0" x2="58" y2="58"/>
+      <line x1="0" y1="0" x2="0" y2="84"/>
+      <line x1="0" y1="0" x2="-58" y2="58"/>
+      <line x1="0" y1="0" x2="-84" y2="0"/>
+      <line x1="0" y1="0" x2="-58" y2="-58"/>
+    </g>
+    <circle r="11" fill="#FFF7EC" opacity="0.5"/>
+    <ellipse cx="-26" cy="-30" rx="24" ry="14" fill="#FFFFFF" opacity="0.2"/>
+  </g>
+
+  <g id="leaf-unit">
+    <ellipse cx="6" cy="8" rx="58" ry="30" fill="#2E2013" opacity="0.08"/>
+    <path d="M0,0 C40,-56 96,-56 108,0 C96,56 40,56 0,0 Z" fill="url(#leafGrad)"/>
+    <path d="M6,0 L100,0" stroke="#3F4E2C" stroke-width="2.4" opacity="0.6"/>
+    <path d="M20,-4 L40,-26" stroke="#3F4E2C" stroke-width="1.4" opacity="0.45"/>
+    <path d="M50,-4 L66,-30" stroke="#3F4E2C" stroke-width="1.4" opacity="0.45"/>
+    <path d="M20,4 L40,26" stroke="#3F4E2C" stroke-width="1.4" opacity="0.45"/>
+    <path d="M50,4 L66,30" stroke="#3F4E2C" stroke-width="1.4" opacity="0.45"/>
+    <ellipse cx="24" cy="-10" rx="14" ry="7" fill="#FFFFFF" opacity="0.2"/>
+  </g>
+  <radialGradient id="bgSurface" cx="50%" cy="35%" r="75%"><stop offset="0%" stop-color="#F3DFC3"/><stop offset="100%" stop-color="#D9B88C"/></radialGradient>
+</defs>
+</svg>
+
+<nav id="siteNav">
+  <div class="wrap">
+    <div class="logo-group">
+      <svg class="logomark" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="#C06B27" stroke-width="1.4"/>
+        <circle cx="16" cy="16" r="9.5" fill="none" stroke="#C06B27" stroke-width="1.4"/>
+        <circle cx="16" cy="16" r="3.4" fill="#E58A38"/>
+      </svg>
+      <span class="logo">Dryzil</span>
+    </div>
+    <a class="nav-cta" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener">
+      <span class="full">Message us on WhatsApp</span>
+      <span class="short" style="display:none;">WhatsApp</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-media">
+    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated scattering of dried mango, beetroot and berry slices on a warm surface">
+      <rect width="1600" height="1000" fill="url(#bgSurface)"/>
+      <use href="#mango-unit" transform="translate(1180,260) rotate(-8) scale(1.6)"/>
+      <use href="#beet-unit" transform="translate(280,180) rotate(12) scale(0.9)"/>
+      <use href="#beet-unit" transform="translate(700,760) rotate(-4) scale(1.12)"/>
+      <use href="#citrus-unit" transform="translate(1320,700) rotate(6) scale(0.78)"/>
+      <use href="#mango-unit" transform="translate(420,520) rotate(-14) scale(0.58)"/>
+      <use href="#leaf-unit" transform="translate(940,120) rotate(20) scale(0.62)"/>
+      <use href="#leaf-unit" transform="translate(1000,190) rotate(-30) scale(0.5)"/>
+      <use href="#leaf-unit" transform="translate(110,690) rotate(45) scale(0.55)"/>
+      <use href="#citrus-unit" transform="translate(560,300) rotate(30) scale(0.44)"/>
+      <use href="#beet-unit" transform="translate(1420,430) rotate(-10) scale(0.36)"/>
+</svg>
+  </div>
+  <div class="hero-content">
+    <div class="wrap">
+      <p class="eyebrow">New Delhi</p>
+      <h1>Fruit and vegetables,<br><em>concentrated</em>.</h1>
+      <p class="sub">We remove the water and leave everything else — no added sugar, no oil, no preservatives. Just what dehydration was always supposed to be.</p>
+      <div class="btn-row">
+        <a class="btn-primary" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.09c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.08.15.13.32.02.52-.1.19-.16.31-.31.48-.16.17-.33.38-.47.51-.16.15-.32.32-.14.62.19.3.83 1.36 1.78 2.21 1.22 1.09 2.25 1.43 2.55 1.59.3.15.48.13.65-.08.18-.21.75-.87.95-1.17.19-.3.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.08.13.08.72-.16 1.4z"/></svg>
+          Message us on WhatsApp
+        </a>
+        <a class="btn-secondary-light" href="#fruits">Explore the range</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</header>
+
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span>FSSAI licensed</span><span>·</span>
+    <span>No added sugar</span><span>·</span>
+    <span>No preservatives</span><span>·</span>
+    <span>Direct from source</span><span>·</span>
+    <span>Made in New Delhi</span><span>·</span>
+    <span>FSSAI licensed</span><span>·</span>
+    <span>No added sugar</span><span>·</span>
+    <span>No preservatives</span><span>·</span>
+    <span>Direct from source</span><span>·</span>
+    <span>Made in New Delhi</span><span>·</span>
+  </div>
+</div>
+
+<section class="stat-hero">
+  <div class="wrap">
+    <p class="eyebrow reveal">Why dehydrate</p>
+    <h2 class="reveal">Fresh produce spoils in days. This keeps its character for <span class="num">months</span> — without a single additive.</h2>
+    <div class="stat-trio reveal">
+      <div class="cell"><div class="n">0g</div><div class="l">Added sugar, across every product</div></div>
+      <div class="cell"><div class="n">6–10h</div><div class="l">Low, slow drying time per batch</div></div>
+      <div class="cell"><div class="n">100%</div><div class="l">Real fruit and vegetables — nothing else</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="feature custom reverse">
+  <div class="wrap">
+    <div class="feature-media">
+      <svg viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated custom dehydration process with fruit slices and dried flakes">
+        <rect width="600" height="750" fill="#F6E8D8"/>
+        <circle cx="310" cy="340" r="220" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M220 180c32-46 94-64 150-44c52 19 88 70 82 126c-6 56-48 98-100 104c-54 6-102-28-118-78c-16-50 4-105 36-108Z" fill="#F3C08D"/>
+        <path d="M195 256c16-28 46-42 76-38c32 4 58 26 68 54" stroke="#D37B29" stroke-width="16" fill="none" stroke-linecap="round"/>
+        <path d="M370 410c-4 28-26 48-52 52c-36 6-66-18-72-50" stroke="#F8DEB7" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.9"/>
+        <path d="M260 540c14-24 42-32 66-24c24 8 38 32 38 58" stroke="#A67737" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">Custom dehydration</span>
+      <h2>Request the product, quantity and delivery — we’ll make it happen.</h2>
+      <p>Tell us exactly what you want dehydrated, choose the quantity, and we will dry, pack and deliver it professionally. Every order is made to request using real fruit and vegetables, without syrup, oil or preservatives.</p>
+      <ul class="usp-list">
+        <li>Choose any fruit, vegetable or herb.</li>
+        <li>Specify the amount you need.</li>
+        <li>We handle low-temperature drying, packaging and delivery.</li>
+      </ul>
+      <a class="feature-link" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20I%27d%20like%20a%20custom%20dehydration%20order." target="_blank" rel="noopener">Request a custom order →</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-strip">
+  <div class="wrap">
+    <div class="gallery-grid reveal">
+      <figure>
+        <svg viewBox="0 0 700 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated board of sliced mango and berries">
+          <rect width="700" height="700" fill="#C9A177"/>
+          <rect x="40" y="40" width="620" height="620" rx="18" fill="#EFE0C9"/>
+          <use href="#mango-unit" transform="translate(230,260) rotate(-6) scale(1.35)"/>
+          <use href="#beet-unit" transform="translate(480,430) rotate(14) scale(0.82)"/>
+          <use href="#citrus-unit" transform="translate(500,190) rotate(-20) scale(0.5)"/>
+          <use href="#citrus-unit" transform="translate(200,500) rotate(30) scale(0.36)"/>
+</svg>
+        <figcaption>Sourced fresh, weekly</figcaption>
+      </figure>
+      <div class="gallery-col">
+        <figure>
+          <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated beetroot slice macro">
+            <rect width="500" height="300" fill="#E7CBB5"/>
+            <use href="#beet-unit" transform="translate(250,150) scale(1.15)"/>
+</svg>
+          <figcaption>Root to chip</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated cluster of fresh mint leaves">
+            <rect width="500" height="300" fill="#DCE6C9"/>
+            <use href="#leaf-unit" transform="translate(150,150) rotate(-10) scale(1.05)"/>
+            <use href="#leaf-unit" transform="translate(300,110) rotate(24) scale(0.85)"/>
+            <use href="#leaf-unit" transform="translate(370,220) rotate(-30) scale(0.7)"/>
+</svg>
+          <figcaption>Whole-leaf herbs</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection-section" aria-labelledby="collection-title">
+  <div class="wrap">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Signature assortment</p>
+      <h2 id="collection-title">A calm, curated pantry edit made to feel effortless from the first bite.</h2>
+    </div>
+    <div class="collection-grid reveal">
+      <article class="product-card product-card--mango">
+        <div class="product-card__media">
+          <span class="product-card__badge">Best seller</span>
+          <div class="product-card__shape"></div>
+          <svg viewBox="0 0 140 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="mangoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FEF1D9"/>
+                <stop offset="100%" stop-color="#F59B26"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="72" cy="56" rx="48" ry="34" fill="url(#mangoGrad)"/>
+            <ellipse cx="95" cy="34" rx="16" ry="18" fill="#F9B457" opacity="0.8"/>
+            <ellipse cx="60" cy="44" rx="16" ry="18" fill="rgba(255,255,255,0.45)"/>
+          </svg>
+        </div>
+        <div class="product-card__body">
+          <h3>Mango</h3>
+          <p>Sweet, concentrated fruit with a clean finish and no added sugar.</p>
+          <a href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20mango%20range." target="_blank" rel="noopener">Ask for mango →</a>
+        </div>
+      </article>
+      <article class="product-card product-card--beet">
+        <div class="product-card__media">
+          <span class="product-card__badge">Crunchy</span>
+          <div class="product-card__shape"></div>
+          <svg viewBox="0 0 140 100" aria-hidden="true">
+            <circle cx="70" cy="56" r="36" fill="#C84A6D"/>
+            <circle cx="70" cy="56" r="22" fill="#F0B3C4" opacity="0.9"/>
+            <circle cx="70" cy="56" r="10" fill="#FFE4E8" opacity="0.8"/>
+            <path d="M34 48c16-12 36-10 56 0" stroke="#DE7A9B" stroke-width="4" fill="none" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="product-card__body">
+          <h3>Beetroot</h3>
+          <p>Deep flavour and crisp texture, dried slow without oil or fry.</p>
+          <a href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20beetroot%20range." target="_blank" rel="noopener">Ask for beetroot →</a>
+        </div>
+      </article>
+      <article class="product-card product-card--herb">
+        <div class="product-card__media">
+          <span class="product-card__badge">Fresh leaf</span>
+          <div class="product-card__shape"></div>
+          <svg viewBox="0 0 140 100" aria-hidden="true">
+            <path d="M34 56c16-28 40-28 58-10" fill="none" stroke="#5D8B50" stroke-width="12" stroke-linecap="round"/>
+            <path d="M38 52c14-22 34-20 52 4" fill="none" stroke="#8CAF79" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+            <ellipse cx="84" cy="40" rx="20" ry="12" fill="#C8E0B8" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="product-card__body">
+          <h3>Herbs</h3>
+          <p>Mint, curry leaf and more, dried whole for instant flavour.</p>
+          <a href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20herbs%20range." target="_blank" rel="noopener">Ask for herbs →</a>
+        </div>
+      </article>
+      <article class="product-card product-card--gift">
+        <div class="product-card__media">
+          <span class="product-card__badge">Gift ready</span>
+          <div class="product-card__shape"></div>
+          <svg viewBox="0 0 140 100" aria-hidden="true">
+            <rect x="30" y="30" width="80" height="48" rx="10" fill="#F7D9B7"/>
+            <path d="M30 54h80" stroke="#C48A4E" stroke-width="6"/>
+            <path d="M70 30v48" stroke="#C48A4E" stroke-width="6"/>
+            <path d="M70 26c-12 0-18 6-18 18c0 8 6 16 18 18c12-2 18-10 18-18c0-12-6-18-18-18Z" fill="#F9B054"/>
+          </svg>
+        </div>
+        <div class="product-card__body">
+          <h3>Gift boxes</h3>
+          <p>Curated combinations for sharing, hospitality and everyday pantry upgrades.</p>
+          <a href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20gift%20boxes." target="_blank" rel="noopener">Ask for boxes →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="feature fruits" id="fruits">
+  <div class="wrap">
+    <div class="feature-media">
+      <svg viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated mango and berry slices arranged as if in a bowl">
+        <rect width="600" height="750" fill="#F3E2C8"/>
+        <circle cx="300" cy="375" r="260" fill="#FFFFFF" opacity="0.4"/>
+        <use href="#mango-unit" transform="translate(300,330) rotate(-8) scale(1.7)"/>
+        <use href="#citrus-unit" transform="translate(150,540) rotate(20) scale(0.58)"/>
+        <use href="#citrus-unit" transform="translate(460,220) rotate(-16) scale(0.44)"/>
+        <use href="#beet-unit" transform="translate(430,560) rotate(10) scale(0.38)"/>
+</svg>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">Fruits</span>
+      <h2>Fruit, at its most intense.</h2>
+      <p>Mango and mixed berries, sliced thin and dried slow until the sugars and colour concentrate on their own — no syrup, no added sugar, nothing to mask what's already there.</p>
+      <a class="feature-link" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20fruit%20range." target="_blank" rel="noopener">Ask about the fruit range →</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature veg reverse">
+  <div class="wrap">
+    <div class="feature-media">
+      <svg viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated beetroot slices layered as if in a bowl">
+        <rect width="600" height="750" fill="#E7D2B8"/>
+        <circle cx="300" cy="375" r="260" fill="#FBF2E4" opacity="0.4"/>
+        <use href="#beet-unit" transform="translate(300,340) rotate(-4) scale(1.65)"/>
+        <use href="#beet-unit" transform="translate(140,560) rotate(18) scale(0.68)"/>
+        <use href="#leaf-unit" transform="translate(450,570) rotate(-12) scale(0.55)"/>
+</svg>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">Vegetables</span>
+      <h2>Savoury, not fried.</h2>
+      <p>Beetroot and root vegetables baked low and slow until genuinely crisp — the same snap as a fried chip, none of the oil.</p>
+      <a class="feature-link" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20vegetable%20range." target="_blank" rel="noopener">Ask about the vegetable range →</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature herb">
+  <div class="wrap">
+    <div class="feature-media">
+      <svg viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated cluster of fresh mint and herb leaves">
+        <rect width="600" height="750" fill="#DCE6C9"/>
+        <use href="#leaf-unit" transform="translate(230,300) rotate(-14) scale(1.4)"/>
+        <use href="#leaf-unit" transform="translate(400,220) rotate(28) scale(1.1)"/>
+        <use href="#leaf-unit" transform="translate(440,480) rotate(-30) scale(0.95)"/>
+        <use href="#leaf-unit" transform="translate(210,560) rotate(40) scale(0.85)"/>
+</svg>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">Herb &amp; spice</span>
+      <h2>Whole leaf, sun-dried.</h2>
+      <p>Mint and curry leaf dried whole, never crushed to dust — rehydrates instantly in cooking, or eat straight from the pack.</p>
+      <a class="feature-link" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20herb%20range." target="_blank" rel="noopener">Ask about the herb range →</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature mix reverse">
+  <div class="wrap">
+    <div class="feature-media">
+      <svg viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated mix of mango, beetroot, berry and mint arranged together">
+        <rect width="600" height="750" fill="#EAD9CB"/>
+        <use href="#mango-unit" transform="translate(230,260) rotate(-10) scale(1.15)"/>
+        <use href="#beet-unit" transform="translate(420,320) rotate(16) scale(0.85)"/>
+        <use href="#citrus-unit" transform="translate(180,520) rotate(20) scale(0.55)"/>
+        <use href="#leaf-unit" transform="translate(400,560) rotate(-16) scale(0.55)"/>
+        <use href="#citrus-unit" transform="translate(300,620) rotate(8) scale(0.34)"/>
+</svg>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">Mixed &amp; gifting</span>
+      <h2>Built for sharing.</h2>
+      <p>A curated set across the fruit, vegetable and herb lines — packed for gifting, grazing, or stocking a pantry properly.</p>
+      <a class="feature-link" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20Tell%20me%20more%20about%20your%20gifting%20boxes." target="_blank" rel="noopener">Ask about gift boxes →</a>
+    </div>
+  </div>
+</section>
+
+<div class="ring-divider"><div class="line"></div><div class="ring"></div><div class="line right"></div></div>
+
+<section class="process">
+  <div class="wrap">
+    <div class="process-head reveal">
+      <p class="eyebrow">The process</p>
+      <h2>From market to pouch, in order</h2>
+      <p>Every batch follows the same four steps — no shortcuts, no shared equipment with anything fried or preserved in syrup.</p>
+    </div>
+    <div class="trays reveal">
+      <div class="tray">
+        <p class="idx">01</p>
+        <h3>Harvest</h3>
+        <p>Sourced the same week from local markets and growers — never held in cold storage for weeks first.</p>
+      </div>
+      <div class="tray">
+        <p class="idx">02</p>
+        <h3>Slice</h3>
+        <p>Cut thin and even by hand, so every piece dries at the same rate.</p>
+      </div>
+      <div class="tray">
+        <p class="idx">03</p>
+        <h3>Dehydrate</h3>
+        <p>Low, steady heat for six to ten hours. Never fried, never blanched in syrup.</p>
+      </div>
+      <div class="tray">
+        <p class="idx">04</p>
+        <h3>Pack</h3>
+        <p>Sealed the same day with a food-grade silica sachet, weighed and batch-dated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-grid reveal">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h4>FSSAI licensed</h4>
+        <p>Registered under FoSCoS, licence number on every pack.</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 20.3l8.8-8.6a5 5 0 0 0 0-7.1Z"/></svg>
+        <h4>Nothing added</h4>
+        <p>No added sugar, no oil, no preservatives — read the label to check.</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <h4>Freshly packed</h4>
+        <p>Dried and sealed within days, not months in a warehouse.</p>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h4>Direct from source</h4>
+        <p>Sold straight to you — no middle distributor marking up the price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap">
+  <div class="cta-section">
+    <div class="cta-media">
+      <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated wide arrangement of mango, beetroot, berry and mint">
+        <rect width="1600" height="700" fill="#E7C79A"/>
+        <use href="#mango-unit" transform="translate(260,220) rotate(-8) scale(1.35)"/>
+        <use href="#beet-unit" transform="translate(640,420) rotate(14) scale(1.05)"/>
+        <use href="#citrus-unit" transform="translate(1020,200) rotate(-18) scale(0.9)"/>
+        <use href="#mango-unit" transform="translate(1300,450) rotate(20) scale(1.15)"/>
+        <use href="#leaf-unit" transform="translate(880,560) rotate(-10) scale(0.85)"/>
+        <use href="#citrus-unit" transform="translate(420,540) rotate(24) scale(0.5)"/>
+</svg>
+    </div>
+    <div class="cta-inner">
+      <p class="eyebrow">Order directly</p>
+      <h2>No storefront yet — just <em>message us</em> and we'll sort the rest.</h2>
+      <p>Tell us what you're after and we'll confirm stock, price and delivery over WhatsApp.</p>
+      <a class="btn-primary" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.09c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.08.15.13.32.02.52-.1.19-.16.31-.31.48-.16.17-.33.38-.47.51-.16.15-.32.32-.14.62.19.3.83 1.36 1.78 2.21 1.22 1.09 2.25 1.43 2.55 1.59.3.15.48.13.65-.08.18-.21.75-.87.95-1.17.19-.3.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.08.13.08.72-.16 1.4z"/></svg>
+        Start an order on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="col">
+        <div class="logo-group">
+          <svg class="logomark" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" fill="none" stroke="#C06B27" stroke-width="1.4"/>
+            <circle cx="16" cy="16" r="9.5" fill="none" stroke="#C06B27" stroke-width="1.4"/>
+            <circle cx="16" cy="16" r="3.4" fill="#E58A38"/>
+          </svg>
+          <span class="logo">Dryzil</span>
+        </div>
+        <p style="max-width:280px;">Dried fruit, vegetables, herb and spice. Dried. Concentrated. Nothing else added.</p>
+      </div>
+      <div class="col">
+        <h5>Contact</h5>
+        <a href="https://wa.me/919555218528" target="_blank" rel="noopener">WhatsApp: +91 95552 18528</a>
+        <a href="#">Instagram</a>
+        <p>New Delhi, India</p>
+      </div>
+      <div class="col">
+        <h5>Legal</h5>
+        <p>FSSAI Lic. No. XXXXXXXXXXXXXX</p>
+        <p>Batch-dated on every pack</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dryzil. All rights reserved.</span>
+      <span>Made in New Delhi</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919555218528?text=Hi%20Dryzil!%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener" aria-label="Message Dryzil on WhatsApp">
+  <span class="wa-pulse"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.09c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.08.15.13.32.02.52-.1.19-.16.31-.31.48-.16.17-.33.38-.47.51-.16.15-.32.32-.14.62.19.3.83 1.36 1.78 2.21 1.22 1.09 2.25 1.43 2.55 1.59.3.15.48.13.65-.08.18-.21.75-.87.95-1.17.19-.3.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.08.13.08.72-.16 1.4z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
