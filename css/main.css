@@ -125,6 +125,37 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { transform: scaleX(1); }
+.nav-actions { display: flex; align-items: center; gap: 22px; margin-left: auto; }
+.nav-email {
+  font-size: 14px; font-weight: 500; color: var(--text-muted);
+  position: relative; transition: color var(--dur-fast) var(--ease);
+}
+.nav-email::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px;
+  background: var(--mango); transform: scaleX(0); transform-origin: left;
+  transition: transform var(--dur-fast) var(--ease);
+}
+.nav-email:hover { color: var(--text); }
+.nav-email:hover::after { transform: scaleX(1); }
+.nav-ig {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 50%; color: var(--text-muted);
+  border: 1px solid var(--card-border); position: relative; isolation: isolate;
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.nav-ig svg { width: 19px; height: 19px; position: relative; z-index: 1; }
+.nav-ig::before {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; z-index: 0;
+  background: radial-gradient(circle at 30% 107%, #FDCB5C 0%, #F7773B 25%, #E1306C 55%, #C13584 75%, #833AB4 100%);
+  opacity: 0; transform: scale(0.6);
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.nav-ig:hover {
+  color: #fff; border-color: transparent; transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px rgba(193,53,132,0.6);
+}
+.nav-ig:hover::before { opacity: 1; transform: scale(1); }
 .nav-cta {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--mango); color: var(--text);
@@ -440,6 +471,7 @@ footer .col h5 { font-family: var(--font-mono); font-size: 12px; letter-spacing:
   .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .nav-cta span.full { display: none; }
+  .nav-email { display: none; }
 }
 @media (max-width: 600px) {
   :root { --gutter: 18px; }
