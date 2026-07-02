@@ -334,6 +334,9 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .feature.mix    .feature-tag { background: color-mix(in srgb, var(--cherry) 16%, var(--bg)); color: var(--cherry-deep); }
 .feature-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; transition: gap var(--dur-fast) var(--ease); }
 .feature-link:hover { gap: 12px; }
+.feature-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.feature-link.muted { font-size: 14px; font-weight: 500; color: var(--text-muted); border-bottom-color: color-mix(in srgb, var(--text-muted) 40%, transparent); }
+.feature-link.muted:hover { color: var(--text); border-bottom-color: currentColor; }
 .feature.fruits .feature-link { color: var(--mango-deep); }
 .feature.veg    .feature-link { color: var(--sage-deep); }
 .feature.herb   .feature-link { color: #8A6412; }
