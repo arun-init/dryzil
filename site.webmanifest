@@ -1,0 +1,13 @@
+{
+  "name": "Dryzil",
+  "short_name": "Dryzil",
+  "description": "Concentrated dried fruit, vegetables and herbs with no added sugar, oil or preservatives.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCF6EC",
+  "theme_color": "#FCF6EC",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
